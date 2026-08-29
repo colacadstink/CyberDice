@@ -31,7 +31,7 @@ function App() {
       <Field dice={bottomDice} position="bottom" onDieClick={setModalDie}></Field>
     </div>
     {!modalDie ? "" : <div className="editor">
-      <DieEditor die={modalDie} onSave={saveDie}></DieEditor>
+      <DieEditor die={modalDie} onSave={saveDie} onCancel={() => setModalDie(undefined)}></DieEditor>
     </div>}
   </div>;
 }

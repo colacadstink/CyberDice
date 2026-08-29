@@ -3,6 +3,7 @@ import type {DieInfo} from "../../util/types.ts";
 type DieEditorParams = {
   die: DieInfo,
   onSave: (die: DieInfo) => unknown,
+  onCancel: () => unknown,
 };
 
 function DieEditor({die}: DieEditorParams) {
