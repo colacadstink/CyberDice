@@ -23,6 +23,8 @@ jobs:
           cache: 'npm'
       - run: npm install
       - run: npm run build
+        env:
+          VITE_BASE_URL: '/CyberDice/'
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v3
       - name: Upload GitHub Pages artifact
