@@ -8,7 +8,7 @@ type DieParams = {
 function Die({die, onClick}: DieParams) {
   return (
     <div onClick={onClick}>
-      {die.owner} D{die.sideCount} = {die.face}
+      {die.owner} D{die.sideCount} = {die.value}
     </div>
   );
 }

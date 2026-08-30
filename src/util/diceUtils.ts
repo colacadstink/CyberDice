@@ -10,7 +10,7 @@ export function generateInitialField(): DiceField {
     for (const sideCount of dieFaces) {
       field.push({
         sideCount,
-        face: rollDie(sideCount),
+        value: rollDie(sideCount),
         owner,
         position: owner,
       })
