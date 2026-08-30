@@ -7,9 +7,9 @@ type DieParams = {
 
 function Die({die, onClick}: DieParams) {
   return (
-    <div onClick={onClick}>
-      {die.owner} D{die.sideCount} = {die.value}
-    </div>
+    <span onClick={onClick} className={die.owner==='top'?'polymath':'polymath-bold'}>
+      {die.value}_on_d{die.sideCount}
+    </span>
   );
 }
 

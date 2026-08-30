@@ -1,5 +1,6 @@
 import type {DieInfo, DieOwner} from "../../util/types.ts";
-import {type ChangeEvent, useState} from "react";
+import {type ChangeEvent, useEffect, useState} from "react";
+import Die from "../die/Die.tsx";
 
 type DieEditorParams = {
   die: DieInfo,
@@ -10,6 +11,10 @@ type DieEditorParams = {
 function DieEditor({die, onSave, onCancel}: DieEditorParams) {
   const [newValue, setNewValue] = useState(die.value);
   const [newPos, setNewPos] = useState(die.position);
+  useEffect(() => {
+    setNewValue(die.value);
+    setNewPos(die.position);
+  }, [die])
 
   function handleRadio(event: ChangeEvent<HTMLInputElement>) {
     setNewPos(event.target.value as DieOwner);
@@ -24,7 +29,7 @@ function DieEditor({die, onSave, onCancel}: DieEditorParams) {
   }
 
   return <div>
-    <h4>Die editor - {die.owner} D{die.sideCount} = {die.value}</h4>
+    <h4>Die editor: <Die die={die}></Die></h4>
     <div>
       <label>
         New value:
