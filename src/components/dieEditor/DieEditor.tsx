@@ -30,6 +30,7 @@ function DieEditor({die, onSave, onCancel}: DieEditorParams) {
         New value:
         <input type="number" min="1" max={die.sideCount} value={newValue} onChange={(e) => setNewValue(e.target.valueAsNumber)}/>
       </label>
+      <br/>
       Position:
       <label>
         <input type="radio" name="newPosition" value="top" checked={newPos==='top'} radioGroup="newPositionGroup" onChange={handleRadio}/>
@@ -39,6 +40,7 @@ function DieEditor({die, onSave, onCancel}: DieEditorParams) {
         <input type="radio" name="newPosition" value="bottom" checked={newPos==='bottom'} radioGroup="newPositionGroup" onChange={handleRadio}/>
         Bottom
       </label>
+      <br/>
       <button onClick={save}>Save</button>
       <button onClick={onCancel}>Cancel</button>
     </div>
