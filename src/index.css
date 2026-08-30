@@ -1,25 +1,25 @@
 @font-face {
     font-family: 'Polymath';
     src: url('/fonts/Polymath.woff2') format('woff2');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Polymath';
     src: url('/fonts/Polymath-Bold.woff2') format('woff2');
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
 }
 
 .polymath {
     font-family: 'Polymath', sans-serif;
     font-size: 32pt;
-    font-weight: normal;
+    font-weight: 400;
 }
 .polymath-bold {
     font-family: 'Polymath', sans-serif;
     font-size: 32pt;
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
 }
